@@ -198,7 +198,36 @@ def safe_rendered_text(row, selector):
     except Exception:
         return None
 
-def collect_events_from_activity(page, activity):
+def fetch_matchup_address(detail_page, matchup_link):
+    if not matchup_link:
+        return None
+
+    try:
+        detail_page.goto(matchup_link, wait_until="domcontentloaded", timeout=15000)
+
+        # Tournament.aspx pages expose the location in this span
+        location_span = detail_page.locator("#ctl00_contentMain_lblLocation")
+        if location_span.count() > 0:
+            text = " ".join(location_span.first.inner_text().split())
+            if text:
+                return text
+
+        # Matchup.aspx pages instead render a "Location" heading followed
+        # by address lines as sibling divs, with no id on the container
+        location_block = detail_page.locator(
+            "xpath=//h1[contains(@class,'fs_header') and normalize-space(text())='Location']/parent::div"
+        )
+        if location_block.count() > 0:
+            lines = [line.strip() for line in location_block.first.inner_text().split("\n")]
+            lines = [line for line in lines if line and line not in ("Location", "Directions")]
+            if lines:
+                return ", ".join(lines)
+
+        return None
+    except Exception:
+        return None
+
+def collect_events_from_activity(page, activity, detail_page):
     page.goto(activity["activity_url"], wait_until="domcontentloaded", timeout=15000)
 
     #04182026: no longer in use
@@ -240,12 +269,14 @@ def collect_events_from_activity(page, activity):
         if not any([date, event_name, event_time, location]):
             continue
 
+        address = fetch_matchup_address(detail_page, matchup_link)
+
         event = {
             "school_id": activity["school_id"],
             "school_name": activity["school_name"],
             "activity_name": activity["activity_name"],
             "alg": activity["alg"],
-            #04182026 updated level_of_play 
+            #04182026 updated level_of_play
             "level_of_play": level_of_play or LEVEL_MAP.get(str(activity["level"]), f"Unknown ({activity['level']})"),
             "event_date": date,
             "event_time": event_time,
@@ -255,6 +286,7 @@ def collect_events_from_activity(page, activity):
             "location": location,
             "source_activity_url": activity["activity_url"],
             "matchup_link": matchup_link,
+            "address": address,
         }
 
         events.append(event)
@@ -273,6 +305,7 @@ def main():
         )
 
         page = context.new_page()
+        detail_page = context.new_page()
 
         for school in schools:
             try: 
@@ -289,7 +322,7 @@ def main():
                     try:
                         print(f"\nScraping events for {activity['school_name']} - {activity['activity_name']}")
 
-                        events = collect_events_from_activity(page, activity)
+                        events = collect_events_from_activity(page, activity, detail_page)
 
                         #04302026: skip the printing
                         #for event in events:
