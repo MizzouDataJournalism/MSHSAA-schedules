@@ -11,7 +11,7 @@ import os
 BASE_URL = "https://www.mshsaa.org"
 SCHOOL_PAGE = "https://www.mshsaa.org/MySchool/Schedule.aspx?s={school_id}"
 
-USER_AGENT = "HighSchoolSportsResearchBot/1.0 (contact: apsago@mail.missouri.edu)"
+USER_AGENT = "HighSchoolSportsResearchBot/1.0 (contact: lucasek@missouri.edu)"
 
 schools = [
     {"school_name": "Columbia Independent", "school_id": 566},
@@ -89,7 +89,7 @@ def visit_school(page, school):
 
     print(f"\nVisiting {school_name} ({school_id}): {url}")
 
-    page.goto(url, wait_until="domcontentloaded",timeout=15000)
+    page.goto(url, wait_until="domcontentloaded",timeout=35000)
 
     print(f"Final URL: {page.url}")
 
