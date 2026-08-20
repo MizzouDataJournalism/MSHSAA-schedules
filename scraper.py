@@ -1,4 +1,4 @@
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 import csv
 import time
 from pathlib import Path
@@ -56,6 +56,8 @@ OUTPUT_DIR = Path("output")
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 OUTPUT_FILE = OUTPUT_DIR / "events.csv"
+
+failed_pages = []
 
 activity_record = {
     "school_id": None,
@@ -148,7 +150,11 @@ def collect_activity_links(page, school):
     school_name = school["school_name"]
 
     school_url = SCHOOL_PAGE.format(school_id=school_id)
-    page.goto(school_url, wait_until="domcontentloaded",timeout=15000)
+    try:
+        page.goto(school_url, wait_until="domcontentloaded", timeout=35000)
+    except PlaywrightTimeoutError:
+        failed_pages.append({"stage": "school page", "school_name": school_name, "url": school_url})
+        raise
 
     anchors = page.locator("#Activities a").all()
 
@@ -203,8 +209,12 @@ def fetch_matchup_address(detail_page, matchup_link):
         return None
 
     try:
-        detail_page.goto(matchup_link, wait_until="domcontentloaded", timeout=15000)
+        detail_page.goto(matchup_link, wait_until="domcontentloaded", timeout=35000)
+    except PlaywrightTimeoutError:
+        failed_pages.append({"stage": "matchup detail page", "url": matchup_link})
+        return None
 
+    try:
         # Tournament.aspx pages expose the location in this span
         location_span = detail_page.locator("#ctl00_contentMain_lblLocation")
         if location_span.count() > 0:
@@ -228,7 +238,16 @@ def fetch_matchup_address(detail_page, matchup_link):
         return None
 
 def collect_events_from_activity(page, activity, detail_page):
-    page.goto(activity["activity_url"], wait_until="domcontentloaded", timeout=15000)
+    try:
+        page.goto(activity["activity_url"], wait_until="domcontentloaded", timeout=35000)
+    except PlaywrightTimeoutError:
+        failed_pages.append({
+            "stage": "activity events page",
+            "school_name": activity["school_name"],
+            "activity_name": activity["activity_name"],
+            "url": activity["activity_url"],
+        })
+        raise
 
     #04182026: no longer in use
     #04152026: added to correctly find level of play
@@ -425,6 +444,16 @@ def main():
 
         else:
             print("No events found; CSV not written.")
+
+        if failed_pages:
+            print(f"\n{len(failed_pages)} page(s) failed to load:")
+            for f in failed_pages:
+                label = " - ".join(
+                    v for v in (f.get("school_name"), f.get("activity_name")) if v
+                )
+                print(f"  [{f['stage']}] {label + ' - ' if label else ''}{f['url']}")
+        else:
+            print("\nAll pages loaded successfully.")
 
         browser.close()
 
