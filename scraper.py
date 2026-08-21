@@ -51,6 +51,7 @@ schools = [
 ]
 
 REQUEST_DELAY = 2
+MATCHUP_DELAY = 0.5
 
 OUTPUT_DIR = Path("output")
 OUTPUT_DIR.mkdir(exist_ok=True)
@@ -156,7 +157,8 @@ def collect_activity_links(page, school):
         failed_pages.append({"stage": "school page", "school_name": school_name, "url": school_url})
         raise
 
-    anchors = page.locator("#Activities a").all()
+# skipping the "hide" class to avoid hidden activities (because it's not their season)
+    anchors = page.locator("#Activities a:not(.hide)").all()
 
     activities = []
 
@@ -213,6 +215,8 @@ def fetch_matchup_address(detail_page, matchup_link):
     except PlaywrightTimeoutError:
         failed_pages.append({"stage": "matchup detail page", "url": matchup_link})
         return None
+    finally:
+        time.sleep(MATCHUP_DELAY)
 
     try:
         # Tournament.aspx pages expose the location in this span
