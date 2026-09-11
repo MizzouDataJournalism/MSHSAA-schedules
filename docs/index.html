@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MSHSAA Sports — This Week</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --border: #e3e3e0;
+    --accent: #7a1f2b;
+    --accent-fg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15151a;
+      --card: #1f1f26;
+      --text: #f0f0f0;
+      --muted: #a0a0a8;
+      --border: #33333c;
+      --accent: #c65a67;
+      --accent-fg: #1a1a1a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 16px;
+    padding-bottom: 48px;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  select {
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+  button {
+    background: var(--accent);
+    color: var(--accent-fg);
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  button:hover { opacity: 0.9; }
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
+  .day-group { margin-bottom: 24px; }
+  .day-heading {
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 8px;
+  }
+  .event {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    align-items: baseline;
+  }
+  .event .time {
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    min-width: 72px;
+    font-size: 0.85rem;
+  }
+  .event .main { flex: 1; min-width: 200px; }
+  .event .sport {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .event .matchup { font-size: 0.95rem; }
+  .event .meta { font-size: 0.8rem; color: var(--muted); }
+  .empty, .loading {
+    color: var(--muted);
+    text-align: center;
+    padding: 40px 0;
+  }
+  footer {
+    max-width: 800px;
+    margin: 24px auto 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>This Week in MSHSAA Sports</h1>
+    <div class="subtitle" id="window-label">Loading…</div>
+
+    <div class="controls">
+      <select id="sport-filter"><option value="">All sports</option></select>
+      <select id="school-filter"><option value="">All schools</option></select>
+      <button id="download-btn" disabled>Download CSV</button>
+    </div>
+
+    <div id="results">
+      <div class="loading">Loading events…</div>
+    </div>
+  </div>
+
+  <footer id="footer"></footer>
+
+<script>
+(function () {
+  var state = { events: [], generatedAt: null };
+  var sportFilter = document.getElementById('sport-filter');
+  var schoolFilter = document.getElementById('school-filter');
+  var downloadBtn = document.getElementById('download-btn');
+  var resultsEl = document.getElementById('results');
+  var windowLabel = document.getElementById('window-label');
+  var footerEl = document.getElementById('footer');
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str == null ? '' : String(str);
+    return div.innerHTML;
+  }
+
+  function populateFilterOptions() {
+    var sports = Array.from(new Set(state.events.map(function (e) { return e.activity_name; }))).sort();
+    var schools = Array.from(new Set(state.events.map(function (e) { return e.school_name; }))).sort();
+
+    sports.forEach(function (s) {
+      var opt = document.createElement('option');
+      opt.value = s;
+      opt.textContent = s;
+      sportFilter.appendChild(opt);
+    });
+    schools.forEach(function (s) {
+      var opt = document.createElement('option');
+      opt.value = s;
+      opt.textContent = s;
+      schoolFilter.appendChild(opt);
+    });
+  }
+
+  function getFilteredEvents() {
+    var sport = sportFilter.value;
+    var school = schoolFilter.value;
+    return state.events.filter(function (e) {
+      return (!sport || e.activity_name === sport) && (!school || e.school_name === school);
+    });
+  }
+
+  function locationLabel(e) {
+    if (e.location === 'home') return 'Home';
+    if (e.location === 'away') return 'Away' + (e.address ? ' — ' + e.address : '');
+    if (e.location === 'tournament') return 'Tournament' + (e.address ? ' — ' + e.address : '');
+    return e.address || '';
+  }
+
+  function render() {
+    var filtered = getFilteredEvents();
+    downloadBtn.disabled = filtered.length === 0;
+
+    if (filtered.length === 0) {
+      resultsEl.innerHTML = '<div class="empty">No events match this filter.</div>';
+      return;
+    }
+
+    var groups = [];
+    var groupIndex = {};
+    filtered.forEach(function (e) {
+      var key = e.date;
+      if (!(key in groupIndex)) {
+        groupIndex[key] = { date: e.date, label: e.day_name + ' — ' + e.display_date, events: [] };
+        groups.push(groupIndex[key]);
+      }
+      groupIndex[key].events.push(e);
+    });
+    groups.sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+
+    var html = groups.map(function (g) {
+      var eventsHtml = g.events.map(function (e) {
+        var timeLabel = e.event_time || (e.score ? '' : 'TBD');
+        var scoreLabel = e.score ? ' <strong>(' + escapeHtml(e.score) + ')</strong>' : '';
+        return '' +
+          '<div class="event">' +
+            '<div class="time">' + escapeHtml(timeLabel) + '</div>' +
+            '<div class="main">' +
+              '<div class="sport">' + escapeHtml(e.activity_name) + '</div>' +
+              '<div class="matchup">' + escapeHtml(e.school_name) + ' vs ' + escapeHtml(e.event_name) + scoreLabel + '</div>' +
+              '<div class="meta">' + escapeHtml(locationLabel(e)) + '</div>' +
+            '</div>' +
+          '</div>';
+      }).join('');
+      return '<div class="day-group"><div class="day-heading">' + escapeHtml(g.label) + '</div>' + eventsHtml + '</div>';
+    }).join('');
+
+    resultsEl.innerHTML = html;
+  }
+
+  function toCsvValue(v) {
+    var s = v == null ? '' : String(v);
+    // Neutralize CSV/formula injection in spreadsheet apps for fields that
+    // could start with a formula trigger character.
+    if (/^[=+\-@]/.test(s)) s = "'" + s;
+    if (/[",\n]/.test(s)) s = '"' + s.replace(/"/g, '""') + '"';
+    return s;
+  }
+
+  function downloadCsv() {
+    var filtered = getFilteredEvents();
+    var columns = ['date', 'day_name', 'event_time', 'school_name', 'activity_name', 'event_name', 'location', 'address', 'score'];
+    var header = columns.join(',');
+    var rows = filtered.map(function (e) {
+      return columns.map(function (c) { return toCsvValue(e[c]); }).join(',');
+    });
+    var csv = [header].concat(rows).join('\r\n');
+    var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    var today = new Date().toISOString().slice(0, 10);
+    a.href = url;
+    a.download = 'mshsaa-events-' + today + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  sportFilter.addEventListener('change', render);
+  schoolFilter.addEventListener('change', render);
+  downloadBtn.addEventListener('click', downloadCsv);
+
+  fetch('data.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      state.events = data.events || [];
+      state.generatedAt = data.generated_at;
+      windowLabel.textContent = state.events.length
+        ? 'Events from ' + data.window_start + ' through ' + data.window_end
+        : 'No events found in this window.';
+      footerEl.textContent = data.generated_at ? 'Last updated ' + data.generated_at : '';
+      populateFilterOptions();
+      render();
+    })
+    .catch(function (err) {
+      resultsEl.innerHTML = '<div class="empty">Could not load event data.</div>';
+      windowLabel.textContent = '';
+      console.error(err);
+    });
+})();
+</script>
+</body>
+</html>

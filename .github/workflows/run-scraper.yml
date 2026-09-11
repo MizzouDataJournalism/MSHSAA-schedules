@@ -33,12 +33,17 @@ jobs:
         run: |
           python scraper.py
 
+      - name: Build site data
+        run: |
+          python build_site_data.py
+
       - name: Commit and push updated files
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add output/*
           git add output/events.csv output/latest.xlsx output/*.xlsx output/events.json
+          git add docs/data.json
           git commit -m "Update event files" || echo "No changes to commit"
           git pull --rebase origin main
           git push

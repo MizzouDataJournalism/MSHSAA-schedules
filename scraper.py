@@ -14,40 +14,40 @@ SCHOOL_PAGE = "https://www.mshsaa.org/MySchool/Schedule.aspx?s={school_id}"
 USER_AGENT = "HighSchoolSportsResearchBot/1.0 (contact: lucasek@missouri.edu)"
 
 schools = [
-    {"school_name": "Columbia Independent", "school_id": 566},
-    {"school_name": "Christian Fellowship", "school_id": 1099},
-    {"school_name": "Father Tolton", "school_id": 917},
+    #{"school_name": "Columbia Independent", "school_id": 566},
+    #{"school_name": "Christian Fellowship", "school_id": 1099},
+    #{"school_name": "Father Tolton", "school_id": 917},
     {"school_name": "Battle High School", "school_id": 953},
-    {"school_name": "Rock Bridge High School", "school_id": 578},
-    {"school_name": "Hickman High School", "school_id": 85},
-    {"school_name": "Hallsville High School", "school_id": 311},
-    {"school_name": "Centralia High School", "school_id": 53},
-    {"school_name": "Southern Boone High School", "school_id": 2},
-    {"school_name": "Glasgow High School", "school_id": 302},
-    {"school_name": "Harrisburg High School", "school_id": 313},
-    {"school_name": "Higbee High School", "school_id": 317},
-    {"school_name": "Jefferson City High School", "school_id": 84},
-    {"school_name": "Helias High School", "school_id": 522},
-    {"school_name": "Capital City High School", "school_id": 1540},
-    {"school_name": "Blair Oaks High School", "school_id": 217},
-    {"school_name": "Fulton High School", "school_id": 80},
-    {"school_name": "Boonville High School", "school_id": 16},
-    {"school_name": "Mexico High School", "school_id": 128},
-    {"school_name": "Moberly High School", "school_id": 132},
-    {"school_name": "California High School", "school_id": 582},
-    {"school_name": "Camdenton High School", "school_id": 26},
-    {"school_name": "Eldon High School", "school_id": 278},
-    {"school_name": "Fayette High School", "school_id": 294},
-    {"school_name": "Marshall High School", "school_id": 360},
-    {"school_name": "Missouri Military Academy", "school_id": 569},
-    {"school_name": "North Callaway High School", "school_id": 139},
-    {"school_name": "Russellville High School", "school_id": 430},
-    {"school_name": "Salisbury High School", "school_id": 431},
-    {"school_name": "Osage High School", "school_id": 152},
-    {"school_name": "Smith-Cotton High School", "school_id": 194},
-    {"school_name": "South Callaway High School", "school_id": 197},
-    {"school_name": "Tipton High School", "school_id": 474},
-    {"school_name": "Versailles High School", "school_id": 485},
+    #{"school_name": "Rock Bridge High School", "school_id": 578},
+    #{"school_name": "Hickman High School", "school_id": 85},
+    #{"school_name": "Hallsville High School", "school_id": 311},
+    #{"school_name": "Centralia High School", "school_id": 53},
+    #{"school_name": "Southern Boone High School", "school_id": 2},
+    #{"school_name": "Glasgow High School", "school_id": 302},
+    #{"school_name": "Harrisburg High School", "school_id": 313},
+    #{"school_name": "Higbee High School", "school_id": 317},
+    #{"school_name": "Jefferson City High School", "school_id": 84},
+    #{"school_name": "Helias High School", "school_id": 522},
+    #{"school_name": "Capital City High School", "school_id": 1540},
+    #{"school_name": "Blair Oaks High School", "school_id": 217},
+    #{"school_name": "Fulton High School", "school_id": 80},
+    #{"school_name": "Boonville High School", "school_id": 16},
+    #{"school_name": "Mexico High School", "school_id": 128},
+    #{"school_name": "Moberly High School", "school_id": 132},
+    #{"school_name": "California High School", "school_id": 582},
+    #{"school_name": "Camdenton High School", "school_id": 26},
+    #{"school_name": "Eldon High School", "school_id": 278},
+    #{"school_name": "Fayette High School", "school_id": 294},
+    #{"school_name": "Marshall High School", "school_id": 360},
+    #{"school_name": "Missouri Military Academy", "school_id": 569},
+    #{"school_name": "North Callaway High School", "school_id": 139},
+    #{"school_name": "Russellville High School", "school_id": 430},
+    #{"school_name": "Salisbury High School", "school_id": 431},
+    #{"school_name": "Osage High School", "school_id": 152},
+    #{"school_name": "Smith-Cotton High School", "school_id": 194},
+    #{"school_name": "South Callaway High School", "school_id": 197},
+    #{"school_name": "Tipton High School", "school_id": 474},
+    #{"school_name": "Versailles High School", "school_id": 485},
 ]
 
 REQUEST_DELAY = 2
@@ -56,7 +56,7 @@ MATCHUP_DELAY = 0.5
 OUTPUT_DIR = Path("output")
 OUTPUT_DIR.mkdir(exist_ok=True)
 
-OUTPUT_FILE = OUTPUT_DIR / "events.csv"
+OUTPUT_FILE = OUTPUT_DIR / "events_test2.csv"
 
 failed_pages = []
 
@@ -395,7 +395,7 @@ def main():
                 return pd.NaT
 
         df['parsed_date'] = df['event_date'].apply(parse_date)
-
+        
         today = datetime.now()
 
         # end of next month
@@ -408,7 +408,7 @@ def main():
         df = df.sort_values(by=['parsed_date', 'school_name'])
 
         # drop helper column
-        df = df.drop(columns=['parsed_date'])
+        #df = df.drop(columns=['parsed_date'])
 
         # convert back to dict for rest of your pipeline
         event_records = df.to_dict(orient='records')
@@ -428,6 +428,7 @@ def main():
                 writer.writerows(event_records)
 
             print(f"CSV saved to {OUTPUT_FILE}")
+            ''' skipping json and excel for now
             xlsx_dated = f"output/KOMU-SportsData-{date.today()}.xlsx"
             xlsx_latest = "output/latest.xlsx"
 
@@ -445,7 +446,7 @@ def main():
             )
 
             print("JSON saved")
-
+            '''
         else:
             print("No events found; CSV not written.")
 
