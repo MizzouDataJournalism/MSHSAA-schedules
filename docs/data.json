@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-27T07:18:02",
-  "window_start": "2026-09-27",
-  "window_end": "2026-10-03",
+  "generated_at": "2026-09-28T23:33:13",
+  "window_start": "2026-09-28",
+  "window_end": "2026-10-04",
   "events": [
     {
       "date": "2026-09-28",
@@ -67,6 +67,18 @@
       "date": "2026-09-28",
       "display_date": "Mon Sep 28",
       "day_name": "Monday",
+      "school_name": "Osage High School",
+      "activity_name": "Tennis Girls",
+      "event_time": "4:00 pm",
+      "event_name": "Rolla",
+      "location": "away",
+      "address": "900 Bulldog Run, Rolla, MO 65401-3399",
+      "score": ""
+    },
+    {
+      "date": "2026-09-28",
+      "display_date": "Mon Sep 28",
+      "day_name": "Monday",
       "school_name": "Battle High School",
       "activity_name": "Tennis Girls",
       "event_time": "4:30 pm",
@@ -97,18 +109,6 @@
       "event_name": "Smith-Cotton",
       "location": "home",
       "address": "662 Laker Pride Road, Camdenton, MO 65020-1409",
-      "score": ""
-    },
-    {
-      "date": "2026-09-28",
-      "display_date": "Mon Sep 28",
-      "day_name": "Monday",
-      "school_name": "Capital City High School",
-      "activity_name": "Softball Fall Season",
-      "event_time": "4:30 pm",
-      "event_name": "Camdenton",
-      "location": "home",
-      "address": "1650 Cavalier Drive, Jefferson City, MO 65109",
       "score": ""
     },
     {
@@ -181,6 +181,18 @@
       "event_name": "Marshall",
       "location": "away",
       "address": "805 S Miami, Marshall, MO 65340-2499",
+      "score": ""
+    },
+    {
+      "date": "2026-09-28",
+      "display_date": "Mon Sep 28",
+      "day_name": "Monday",
+      "school_name": "Capital City High School",
+      "activity_name": "Softball Fall Season",
+      "event_time": "5:00 pm",
+      "event_name": "Camdenton",
+      "location": "home",
+      "address": "1650 Cavalier Drive, Jefferson City, MO 65109",
       "score": ""
     },
     {
@@ -277,6 +289,18 @@
       "event_name": "Linn",
       "location": "away",
       "address": "141 Wildcat Drive, Linn, MO 65051",
+      "score": ""
+    },
+    {
+      "date": "2026-09-28",
+      "display_date": "Mon Sep 28",
+      "day_name": "Monday",
+      "school_name": "Hickman High School",
+      "activity_name": "Softball Fall Season",
+      "event_time": "5:00 pm",
+      "event_name": "Smith-Cotton",
+      "location": "home",
+      "address": "1104 N Providence Rd, Columbia, MO 65203-4398",
       "score": ""
     },
     {
@@ -409,18 +433,6 @@
       "event_name": "Russellville",
       "location": "home",
       "address": "10135 State Rd C, Mokane, MO 65059-0038",
-      "score": ""
-    },
-    {
-      "date": "2026-09-28",
-      "display_date": "Mon Sep 28",
-      "day_name": "Monday",
-      "school_name": "Hickman High School",
-      "activity_name": "Softball Fall Season",
-      "event_time": "5:30 pm",
-      "event_name": "Smith-Cotton",
-      "location": "home",
-      "address": "1104 N Providence Rd, Columbia, MO 65203-4398",
       "score": ""
     },
     {
@@ -730,18 +742,6 @@
       "school_name": "Hickman High School",
       "activity_name": "Golf Girls",
       "event_time": "",
-      "event_name": "Columbia Quad",
-      "location": "tournament",
-      "address": "Columbia, MO",
-      "score": ""
-    },
-    {
-      "date": "2026-09-28",
-      "display_date": "Mon Sep 28",
-      "day_name": "Monday",
-      "school_name": "Hickman High School",
-      "activity_name": "Golf Girls",
-      "event_time": "",
       "event_name": "Jefferson City Jays Invitational",
       "location": "tournament",
       "address": "Jefferson City, MO",
@@ -769,18 +769,6 @@
       "event_name": "Conference Tournament",
       "location": "tournament",
       "address": "Kirksville, MO",
-      "score": ""
-    },
-    {
-      "date": "2026-09-28",
-      "display_date": "Mon Sep 28",
-      "day_name": "Monday",
-      "school_name": "Missouri Military Academy",
-      "activity_name": "Swimming and Diving Boys",
-      "event_time": "",
-      "event_name": "Jeff City Invite - Jefferson City, Capital City, MMA, West Plains, Columbia, Camdenton and CIS",
-      "location": "tournament",
-      "address": "Jefferson City, MO",
       "score": ""
     },
     {
@@ -871,6 +859,18 @@
       "date": "2026-09-29",
       "display_date": "Tue Sep 29",
       "day_name": "Tuesday",
+      "school_name": "Rock Bridge High School",
+      "activity_name": "Golf Girls",
+      "event_time": "3:30 pm",
+      "event_name": "Columbia Quad",
+      "location": "tournament",
+      "address": "Columbia, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-09-29",
+      "display_date": "Tue Sep 29",
+      "day_name": "Tuesday",
       "school_name": "Camdenton High School",
       "activity_name": "Golf Girls",
       "event_time": "4:00 pm",
@@ -943,18 +943,6 @@
       "date": "2026-09-29",
       "display_date": "Tue Sep 29",
       "day_name": "Tuesday",
-      "school_name": "Osage High School",
-      "activity_name": "Tennis Girls",
-      "event_time": "4:00 pm",
-      "event_name": "Helias Catholic",
-      "location": "away",
-      "address": "1305 Swifts Hwy, Jefferson City, MO 65109-2595",
-      "score": ""
-    },
-    {
-      "date": "2026-09-29",
-      "display_date": "Tue Sep 29",
-      "day_name": "Tuesday",
       "school_name": "Smith-Cotton High School",
       "activity_name": "Swimming and Diving Boys",
       "event_time": "4:00 pm",
@@ -1009,6 +997,18 @@
       "event_name": "Crocker",
       "location": "away",
       "address": "601 N Commercial, Crocker, MO 65452",
+      "score": ""
+    },
+    {
+      "date": "2026-09-29",
+      "display_date": "Tue Sep 29",
+      "day_name": "Tuesday",
+      "school_name": "Osage High School",
+      "activity_name": "Tennis Girls",
+      "event_time": "4:30 pm",
+      "event_name": "Helias Catholic",
+      "location": "away",
+      "address": "1305 Swifts Hwy, Jefferson City, MO 65109-2595",
       "score": ""
     },
     {
@@ -1387,12 +1387,12 @@
       "date": "2026-09-29",
       "display_date": "Tue Sep 29",
       "day_name": "Tuesday",
-      "school_name": "Battle High School",
-      "activity_name": "Volleyball Girls",
+      "school_name": "Boonville High School",
+      "activity_name": "Soccer Boys",
       "event_time": "6:00 pm",
-      "event_name": "Union",
+      "event_name": "Osage",
       "location": "away",
-      "address": "1217 W. Main Street, Union, MO 63084",
+      "address": "636 Hwy 42, Osage Beach, MO 65065-5301",
       "score": ""
     },
     {
@@ -1436,6 +1436,18 @@
       "display_date": "Tue Sep 29",
       "day_name": "Tuesday",
       "school_name": "Osage High School",
+      "activity_name": "Soccer Boys",
+      "event_time": "6:00 pm",
+      "event_name": "Boonville",
+      "location": "home",
+      "address": "636 Hwy 42, Osage Beach, MO 65065-5301",
+      "score": ""
+    },
+    {
+      "date": "2026-09-29",
+      "display_date": "Tue Sep 29",
+      "day_name": "Tuesday",
+      "school_name": "Osage High School",
       "activity_name": "Volleyball Girls",
       "event_time": "6:00 pm",
       "event_name": "North Callaway",
@@ -1451,8 +1463,20 @@
       "activity_name": "Soccer Boys",
       "event_time": "6:30 pm",
       "event_name": "Camdenton",
-      "location": "home",
-      "address": "7575 St. Charles Road, Columbia, MO 65202",
+      "location": "away",
+      "address": "662 Laker Pride Road, Camdenton, MO 65020-1409",
+      "score": ""
+    },
+    {
+      "date": "2026-09-29",
+      "display_date": "Tue Sep 29",
+      "day_name": "Tuesday",
+      "school_name": "Battle High School",
+      "activity_name": "Volleyball Girls",
+      "event_time": "6:30 pm",
+      "event_name": "Union",
+      "location": "away",
+      "address": "1217 W. Main Street, Union, MO 63084",
       "score": ""
     },
     {
@@ -1475,8 +1499,8 @@
       "activity_name": "Soccer Boys",
       "event_time": "6:30 pm",
       "event_name": "Battle with Columbia Independent",
-      "location": "away",
-      "address": "7575 St. Charles Road, Columbia, MO 65202",
+      "location": "home",
+      "address": "Jackson Street & Laker Pride Rd, Camdenton, MO 65020",
       "score": ""
     },
     {
@@ -1511,8 +1535,8 @@
       "activity_name": "Soccer Boys",
       "event_time": "6:30 pm",
       "event_name": "Camdenton",
-      "location": "home",
-      "address": "7575 St. Charles Road, Columbia, MO 65202",
+      "location": "away",
+      "address": "662 Laker Pride Road, Camdenton, MO 65020-1409",
       "score": ""
     },
     {
@@ -1627,36 +1651,12 @@
       "date": "2026-09-29",
       "display_date": "Tue Sep 29",
       "day_name": "Tuesday",
-      "school_name": "Boonville High School",
-      "activity_name": "Soccer Boys",
-      "event_time": "6:45 pm",
-      "event_name": "Osage",
-      "location": "away",
-      "address": "636 Hwy 42, Osage Beach, MO 65065-5301",
-      "score": ""
-    },
-    {
-      "date": "2026-09-29",
-      "display_date": "Tue Sep 29",
-      "day_name": "Tuesday",
       "school_name": "Father Tolton",
       "activity_name": "Soccer Boys",
       "event_time": "6:45 pm",
       "event_name": "St. Charles",
       "location": "away",
       "address": "725 N Kingshighway St, St. Charles, MO 63301-1797",
-      "score": ""
-    },
-    {
-      "date": "2026-09-29",
-      "display_date": "Tue Sep 29",
-      "day_name": "Tuesday",
-      "school_name": "Osage High School",
-      "activity_name": "Soccer Boys",
-      "event_time": "6:45 pm",
-      "event_name": "Boonville",
-      "location": "home",
-      "address": "636 Hwy 42, Osage Beach, MO 65065-5301",
       "score": ""
     },
     {
@@ -1843,12 +1843,24 @@
       "date": "2026-09-29",
       "display_date": "Tue Sep 29",
       "day_name": "Tuesday",
+      "school_name": "Battle High School",
+      "activity_name": "Golf Girls",
+      "event_time": "",
+      "event_name": "Columbia Quad",
+      "location": "tournament",
+      "address": "Columbia, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-09-29",
+      "display_date": "Tue Sep 29",
+      "day_name": "Tuesday",
       "school_name": "Blair Oaks High School",
       "activity_name": "Golf Girls",
       "event_time": "",
       "event_name": "Tri County Conference Tournament",
       "location": "tournament",
-      "address": "Ashland, MO",
+      "address": "Columbia, MO",
       "score": ""
     },
     {
@@ -1873,6 +1885,18 @@
       "event_name": "Tri County Conference Tournament",
       "location": "tournament",
       "address": "Ashland, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-09-29",
+      "display_date": "Tue Sep 29",
+      "day_name": "Tuesday",
+      "school_name": "Father Tolton",
+      "activity_name": "Golf Girls",
+      "event_time": "",
+      "event_name": "Columbia Quad",
+      "location": "tournament",
+      "address": "Columbia, MO",
       "score": ""
     },
     {
@@ -1927,6 +1951,18 @@
       "date": "2026-09-29",
       "display_date": "Tue Sep 29",
       "day_name": "Tuesday",
+      "school_name": "Hickman High School",
+      "activity_name": "Golf Girls",
+      "event_time": "",
+      "event_name": "Columbia Quad",
+      "location": "tournament",
+      "address": "Columbia, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-09-29",
+      "display_date": "Tue Sep 29",
+      "day_name": "Tuesday",
       "school_name": "Marshall High School",
       "activity_name": "Cross Country Boys",
       "event_time": "",
@@ -1969,6 +2005,42 @@
       "event_name": "Tri County Conference Tournament",
       "location": "tournament",
       "address": "Boonville, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-09-29",
+      "display_date": "Tue Sep 29",
+      "day_name": "Tuesday",
+      "school_name": "Rock Bridge High School",
+      "activity_name": "Golf Girls",
+      "event_time": "TBD",
+      "event_name": "Hickman",
+      "location": "tournament",
+      "address": "4303 S Providence Rd, Columbia, MO 65203-7198",
+      "score": ""
+    },
+    {
+      "date": "2026-09-29",
+      "display_date": "Tue Sep 29",
+      "day_name": "Tuesday",
+      "school_name": "Rock Bridge High School",
+      "activity_name": "Golf Girls",
+      "event_time": "TBD",
+      "event_name": "Battle",
+      "location": "tournament",
+      "address": "4303 S Providence Rd, Columbia, MO 65203-7198",
+      "score": ""
+    },
+    {
+      "date": "2026-09-29",
+      "display_date": "Tue Sep 29",
+      "day_name": "Tuesday",
+      "school_name": "Rock Bridge High School",
+      "activity_name": "Golf Girls",
+      "event_time": "TBD",
+      "event_name": "Father Tolton",
+      "location": "tournament",
+      "address": "4303 S Providence Rd, Columbia, MO 65203-7198",
       "score": ""
     },
     {
@@ -2053,18 +2125,6 @@
       "event_name": "Fatima",
       "location": "home",
       "address": "2700 Thunderbird Dr, Kingdom City, MO 65262-1817",
-      "score": ""
-    },
-    {
-      "date": "2026-09-30",
-      "display_date": "Wed Sep 30",
-      "day_name": "Wednesday",
-      "school_name": "Hickman High School",
-      "activity_name": "Tennis Girls",
-      "event_time": "3:30 pm",
-      "event_name": "Ft. Zumwalt North",
-      "location": "away",
-      "address": "1230 Tom Ginnever Ave, O'fallon, MO 63366-4499",
       "score": ""
     },
     {
@@ -2311,6 +2371,18 @@
       "date": "2026-09-30",
       "display_date": "Wed Sep 30",
       "day_name": "Wednesday",
+      "school_name": "Columbia Independent",
+      "activity_name": "Tennis Girls",
+      "event_time": "",
+      "event_name": "Smith-Cotton Doubles Tournament",
+      "location": "tournament",
+      "address": "Sedalia, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-09-30",
+      "display_date": "Wed Sep 30",
+      "day_name": "Wednesday",
       "school_name": "Eldon High School",
       "activity_name": "Golf Girls",
       "event_time": "",
@@ -2467,6 +2539,18 @@
       "date": "2026-10-01",
       "display_date": "Thu Oct 1",
       "day_name": "Thursday",
+      "school_name": "Blair Oaks High School",
+      "activity_name": "Golf Girls",
+      "event_time": "10:00 am",
+      "event_name": "Fulton Classic Tournament",
+      "location": "tournament",
+      "address": "Fulton, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-10-01",
+      "display_date": "Thu Oct 1",
+      "day_name": "Thursday",
       "school_name": "Fulton High School",
       "activity_name": "Golf Girls",
       "event_time": "10:00 am",
@@ -2491,24 +2575,24 @@
       "date": "2026-10-01",
       "display_date": "Thu Oct 1",
       "day_name": "Thursday",
-      "school_name": "Boonville High School",
-      "activity_name": "Golf Girls",
-      "event_time": "4:00 pm",
-      "event_name": "Marshall",
-      "location": "away",
-      "address": "805 S Miami, Marshall, MO 65340-2499",
-      "score": ""
-    },
-    {
-      "date": "2026-10-01",
-      "display_date": "Thu Oct 1",
-      "day_name": "Thursday",
       "school_name": "Capital City High School",
       "activity_name": "Soccer Boys",
       "event_time": "4:00 pm",
       "event_name": "Troy Buchanan",
       "location": "away",
       "address": "1190 Old Cap Au Gris Rd, Troy, MO 63379-2300",
+      "score": ""
+    },
+    {
+      "date": "2026-10-01",
+      "display_date": "Thu Oct 1",
+      "day_name": "Thursday",
+      "school_name": "Father Tolton",
+      "activity_name": "Tennis Girls",
+      "event_time": "4:00 pm",
+      "event_name": "Osage",
+      "location": "home",
+      "address": "3351 E Gans Road, Columbia, MO 65201",
       "score": ""
     },
     {
@@ -2557,18 +2641,6 @@
       "event_name": "Moberly Invitational",
       "location": "tournament",
       "address": "Moberly, MO",
-      "score": ""
-    },
-    {
-      "date": "2026-10-01",
-      "display_date": "Thu Oct 1",
-      "day_name": "Thursday",
-      "school_name": "Osage High School",
-      "activity_name": "Tennis Girls",
-      "event_time": "4:00 pm",
-      "event_name": "Father Tolton",
-      "location": "away",
-      "address": "3351 E Gans Road, Columbia, MO 65201",
       "score": ""
     },
     {
@@ -2665,6 +2737,18 @@
       "event_name": "Battle",
       "location": "home",
       "address": "1625 Gratz Brown, Moberly, MO 65270-1904",
+      "score": ""
+    },
+    {
+      "date": "2026-10-01",
+      "display_date": "Thu Oct 1",
+      "day_name": "Thursday",
+      "school_name": "Osage High School",
+      "activity_name": "Tennis Girls",
+      "event_time": "4:30 pm",
+      "event_name": "Father Tolton",
+      "location": "away",
+      "address": "3351 E Gans Road, Columbia, MO 65201",
       "score": ""
     },
     {
@@ -3007,6 +3091,18 @@
       "date": "2026-10-01",
       "display_date": "Thu Oct 1",
       "day_name": "Thursday",
+      "school_name": "Osage High School",
+      "activity_name": "Volleyball Girls",
+      "event_time": "6:15 pm",
+      "event_name": "Eldon",
+      "location": "home",
+      "address": "636 Hwy 42, Osage Beach, MO 65065-5301",
+      "score": ""
+    },
+    {
+      "date": "2026-10-01",
+      "display_date": "Thu Oct 1",
+      "day_name": "Thursday",
       "school_name": "Versailles High School",
       "activity_name": "Volleyball Girls",
       "event_time": "6:15 pm",
@@ -3031,24 +3127,24 @@
       "date": "2026-10-01",
       "display_date": "Thu Oct 1",
       "day_name": "Thursday",
-      "school_name": "Camdenton High School",
-      "activity_name": "Volleyball Girls",
-      "event_time": "6:30 pm",
-      "event_name": "Smith-Cotton",
-      "location": "away",
-      "address": "2010 Tiger Pride Blvd, Sedalia, MO 65301-8503",
-      "score": ""
-    },
-    {
-      "date": "2026-10-01",
-      "display_date": "Thu Oct 1",
-      "day_name": "Thursday",
       "school_name": "Christian Fellowship",
       "activity_name": "Soccer Boys",
       "event_time": "6:30 pm",
       "event_name": "Hickman (JV)",
       "location": "away",
       "address": "1104 N Providence Rd, Columbia, MO 65203-4398",
+      "score": ""
+    },
+    {
+      "date": "2026-10-01",
+      "display_date": "Thu Oct 1",
+      "day_name": "Thursday",
+      "school_name": "Father Tolton",
+      "activity_name": "Soccer Boys",
+      "event_time": "6:30 pm",
+      "event_name": "Warrenton",
+      "location": "away",
+      "address": "803 Pinckney, Warrenton, MO 63383-2335",
       "score": ""
     },
     {
@@ -3295,23 +3391,23 @@
       "date": "2026-10-01",
       "display_date": "Thu Oct 1",
       "day_name": "Thursday",
-      "school_name": "Eldon High School",
+      "school_name": "Camdenton High School",
       "activity_name": "Volleyball Girls",
       "event_time": "7:30 pm",
-      "event_name": "Osage",
+      "event_name": "Smith-Cotton",
       "location": "away",
-      "address": "636 Hwy 42, Osage Beach, MO 65065-5301",
+      "address": "2010 Tiger Pride Blvd, Sedalia, MO 65301-8503",
       "score": ""
     },
     {
       "date": "2026-10-01",
       "display_date": "Thu Oct 1",
       "day_name": "Thursday",
-      "school_name": "Osage High School",
+      "school_name": "Eldon High School",
       "activity_name": "Volleyball Girls",
       "event_time": "7:30 pm",
-      "event_name": "Eldon",
-      "location": "home",
+      "event_name": "Osage",
+      "location": "away",
       "address": "636 Hwy 42, Osage Beach, MO 65065-5301",
       "score": ""
     },
@@ -3355,6 +3451,18 @@
       "date": "2026-10-01",
       "display_date": "Thu Oct 1",
       "day_name": "Thursday",
+      "school_name": "Boonville High School",
+      "activity_name": "Golf Girls",
+      "event_time": "",
+      "event_name": "Fulton Classic Tournament",
+      "location": "tournament",
+      "address": "Fulton, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-10-01",
+      "display_date": "Thu Oct 1",
+      "day_name": "Thursday",
       "school_name": "California High School",
       "activity_name": "Golf Girls",
       "event_time": "",
@@ -3383,6 +3491,18 @@
       "activity_name": "Soccer Boys",
       "event_time": "",
       "event_name": "Laker Shootout",
+      "location": "tournament",
+      "address": "Camdenton, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-10-01",
+      "display_date": "Thu Oct 1",
+      "day_name": "Thursday",
+      "school_name": "Camdenton High School",
+      "activity_name": "Soccer Boys",
+      "event_time": "TBD",
+      "event_name": "Northwest (Cedar Hill)",
       "location": "tournament",
       "address": "Camdenton, MO",
       "score": ""
@@ -3488,11 +3608,11 @@
       "display_date": "Thu Oct 1",
       "day_name": "Thursday",
       "school_name": "Father Tolton",
-      "activity_name": "Tennis Girls",
-      "event_time": "TBD",
-      "event_name": "Osage",
-      "location": "home",
-      "address": "3351 E Gans Road, Columbia, MO 65201",
+      "activity_name": "Golf Girls",
+      "event_time": "",
+      "event_name": "Fulton Classic",
+      "location": "tournament",
+      "address": "",
       "score": ""
     },
     {
@@ -3583,6 +3703,18 @@
       "date": "2026-10-01",
       "display_date": "Thu Oct 1",
       "day_name": "Thursday",
+      "school_name": "Hickman High School",
+      "activity_name": "Golf Girls",
+      "event_time": "",
+      "event_name": "CMAC Tournament",
+      "location": "tournament",
+      "address": "Columbia, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-10-01",
+      "display_date": "Thu Oct 1",
+      "day_name": "Thursday",
       "school_name": "Higbee High School",
       "activity_name": "Cross Country Girls",
       "event_time": "",
@@ -3598,21 +3730,9 @@
       "school_name": "Marshall High School",
       "activity_name": "Golf Girls",
       "event_time": "",
-      "event_name": "Boonville/Chillicothe Match",
+      "event_name": "Chillicothe Match",
       "location": "tournament",
       "address": "1510 East Eastwood Street Marshall, MO 65340",
-      "score": ""
-    },
-    {
-      "date": "2026-10-01",
-      "display_date": "Thu Oct 1",
-      "day_name": "Thursday",
-      "school_name": "Marshall High School",
-      "activity_name": "Golf Girls",
-      "event_time": "TBD",
-      "event_name": "Boonville",
-      "location": "tournament",
-      "address": "Indian Foothills Park, Marshall, MO",
       "score": ""
     },
     {
@@ -3799,6 +3919,18 @@
       "date": "2026-10-02",
       "display_date": "Fri Oct 2",
       "day_name": "Friday",
+      "school_name": "Camdenton High School",
+      "activity_name": "Softball Fall Season",
+      "event_time": "11:00 am",
+      "event_name": "Branson",
+      "location": "tournament",
+      "address": "Springfield, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-10-02",
+      "display_date": "Fri Oct 2",
+      "day_name": "Friday",
       "school_name": "Capital City High School",
       "activity_name": "Softball Fall Season",
       "event_time": "12:45 pm",
@@ -3811,12 +3943,12 @@
       "date": "2026-10-02",
       "display_date": "Fri Oct 2",
       "day_name": "Friday",
-      "school_name": "Versailles High School",
-      "activity_name": "Golf Girls",
-      "event_time": "2:00 pm",
-      "event_name": "Versailles Tri",
+      "school_name": "Camdenton High School",
+      "activity_name": "Softball Fall Season",
+      "event_time": "2:30 pm",
+      "event_name": "St. Teresa's Academy",
       "location": "tournament",
-      "address": "Versailles, MO",
+      "address": "Springfield, MO",
       "score": ""
     },
     {
@@ -4351,6 +4483,18 @@
       "date": "2026-10-02",
       "display_date": "Fri Oct 2",
       "day_name": "Friday",
+      "school_name": "Boonville High School",
+      "activity_name": "Golf Girls",
+      "event_time": "",
+      "event_name": "Versailles Tri",
+      "location": "tournament",
+      "address": "Versailles, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-10-02",
+      "display_date": "Fri Oct 2",
+      "day_name": "Friday",
       "school_name": "Camdenton High School",
       "activity_name": "Cross Country Boys",
       "event_time": "",
@@ -4403,30 +4547,6 @@
       "activity_name": "Softball Fall Season",
       "event_time": "",
       "event_name": "Springfield Invitational",
-      "location": "tournament",
-      "address": "",
-      "score": ""
-    },
-    {
-      "date": "2026-10-02",
-      "display_date": "Fri Oct 2\u2013Oct 3",
-      "day_name": "Friday",
-      "school_name": "Christian Fellowship",
-      "activity_name": "Swimming and Diving Boys",
-      "event_time": "",
-      "event_name": "COMO Invite",
-      "location": "tournament",
-      "address": "",
-      "score": ""
-    },
-    {
-      "date": "2026-10-02",
-      "display_date": "Fri Oct 2\u2013Oct 3",
-      "day_name": "Friday",
-      "school_name": "Columbia Independent",
-      "activity_name": "Swimming and Diving Boys",
-      "event_time": "",
-      "event_name": "COMO Invite",
       "location": "tournament",
       "address": "",
       "score": ""
@@ -4649,6 +4769,18 @@
     },
     {
       "date": "2026-10-02",
+      "display_date": "Fri Oct 2\u2013Oct 3",
+      "day_name": "Friday",
+      "school_name": "Rock Bridge High School",
+      "activity_name": "Softball Fall Season",
+      "event_time": "",
+      "event_name": "Springfield Softball Invitational",
+      "location": "tournament",
+      "address": "Springfield, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-10-02",
       "display_date": "Fri Oct 2",
       "day_name": "Friday",
       "school_name": "Smith-Cotton High School",
@@ -4756,30 +4888,6 @@
       "score": ""
     },
     {
-      "date": "2026-10-02",
-      "display_date": "Fri Oct 2",
-      "day_name": "Friday",
-      "school_name": "Versailles High School",
-      "activity_name": "Golf Girls",
-      "event_time": "TBD",
-      "event_name": "Blair Oaks",
-      "location": "tournament",
-      "address": "913 W Newton, Versailles, MO 65084-1811",
-      "score": ""
-    },
-    {
-      "date": "2026-10-02",
-      "display_date": "Fri Oct 2",
-      "day_name": "Friday",
-      "school_name": "Versailles High School",
-      "activity_name": "Golf Girls",
-      "event_time": "TBD",
-      "event_name": "Cole Camp",
-      "location": "tournament",
-      "address": "913 W Newton, Versailles, MO 65084-1811",
-      "score": ""
-    },
-    {
       "date": "2026-10-03",
       "display_date": "Sat Oct 3",
       "day_name": "Saturday",
@@ -4843,6 +4951,18 @@
       "date": "2026-10-03",
       "display_date": "Sat Oct 3",
       "day_name": "Saturday",
+      "school_name": "Camdenton High School",
+      "activity_name": "Softball Fall Season",
+      "event_time": "9:00 am",
+      "event_name": "Carl Junction",
+      "location": "tournament",
+      "address": "Springfield, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-10-03",
+      "display_date": "Sat Oct 3",
+      "day_name": "Saturday",
       "school_name": "Marshall High School",
       "activity_name": "Swimming and Diving Boys",
       "event_time": "9:00 am",
@@ -4891,24 +5011,24 @@
       "date": "2026-10-03",
       "display_date": "Sat Oct 3",
       "day_name": "Saturday",
-      "school_name": "Rock Bridge High School",
-      "activity_name": "Softball Fall Season",
-      "event_time": "10:00 am",
-      "event_name": "Staley",
-      "location": "away",
-      "address": "Columbia, MO",
-      "score": ""
-    },
-    {
-      "date": "2026-10-03",
-      "display_date": "Sat Oct 3",
-      "day_name": "Saturday",
       "school_name": "Capital City High School",
       "activity_name": "Softball Fall Season",
       "event_time": "10:45 am",
       "event_name": "Aurora",
       "location": "tournament",
       "address": "",
+      "score": ""
+    },
+    {
+      "date": "2026-10-03",
+      "display_date": "Sat Oct 3",
+      "day_name": "Saturday",
+      "school_name": "Eldon High School",
+      "activity_name": "Softball Fall Season",
+      "event_time": "10:45 am",
+      "event_name": "Wright City",
+      "location": "tournament",
+      "address": "Centralia, MO",
       "score": ""
     },
     {
@@ -4988,6 +5108,18 @@
       "display_date": "Sat Oct 3",
       "day_name": "Saturday",
       "school_name": "Camdenton High School",
+      "activity_name": "Soccer Boys",
+      "event_time": "TBD",
+      "event_name": "Hannibal",
+      "location": "tournament",
+      "address": "Camdenton, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-10-03",
+      "display_date": "Sat Oct 3",
+      "day_name": "Saturday",
+      "school_name": "Camdenton High School",
       "activity_name": "Volleyball Girls",
       "event_time": "",
       "event_name": "Mt. Vernon October Aces Tournament",
@@ -5005,6 +5137,18 @@
       "event_name": "Rolla Invitational",
       "location": "tournament",
       "address": "Rolla, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-10-03",
+      "display_date": "Sat Oct 3",
+      "day_name": "Saturday",
+      "school_name": "Centralia High School",
+      "activity_name": "Cross Country Boys",
+      "event_time": "",
+      "event_name": "Frank Horton XC Classic",
+      "location": "tournament",
+      "address": "Memphis, TN",
       "score": ""
     },
     {
@@ -5221,6 +5365,30 @@
       "event_name": "Hoka Frank Horton Twilight",
       "location": "tournament",
       "address": "Memphis, TN",
+      "score": ""
+    },
+    {
+      "date": "2026-10-03",
+      "display_date": "Sat Oct 3",
+      "day_name": "Saturday",
+      "school_name": "Rock Bridge High School",
+      "activity_name": "Softball Fall Season",
+      "event_time": "TBD",
+      "event_name": "Nixa",
+      "location": "tournament",
+      "address": "Springfield, MO",
+      "score": ""
+    },
+    {
+      "date": "2026-10-03",
+      "display_date": "Sat Oct 3",
+      "day_name": "Saturday",
+      "school_name": "Rock Bridge High School",
+      "activity_name": "Softball Fall Season",
+      "event_time": "TBD",
+      "event_name": "Marshfield",
+      "location": "tournament",
+      "address": "Springfield, MO",
       "score": ""
     },
     {
