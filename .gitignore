@@ -11,3 +11,7 @@ env/
 
 # Secrets
 .env
+
+# test runs
+output/test-runs/
+testing/
